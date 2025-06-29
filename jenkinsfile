@@ -3,11 +3,10 @@ pipeline {
     agent any
     stages {
         stage('Clone') {
-  steps {
-    git branch: 'main', url: 'https://github.com/jantarachk/testCICD.git'
-  }
-}
-
+            steps {
+                git branch: 'main', url: 'https://github.com/jantarachk/testCICD.git'
+            }
+        }
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t my-web-cicd .'
