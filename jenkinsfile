@@ -1,10 +1,9 @@
-// Jenkinsfile
 pipeline {
     agent any
     stages {
         stage('Clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/jantarachk/testCICD.git'
+                git 'https://github.com/jantarachk/testCICD.git'
             }
         }
         stage('Build Docker Image') {
